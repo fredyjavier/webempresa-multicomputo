@@ -1,0 +1,20 @@
+{% extends "ProyectoWebApp/base.html" %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+   <br/>
+    <div style="background-color:FFFAFA ;width:60% ; margin:auto; padding: 2px;border-radius: 3px ;">
+    <form method="post" action="" style="color:rgb(10, 10, 10) ;">
+        {% csrf_token %}
+        <div style="width:70% ; margin:auto;">
+         {{form|crispy}}
+         <button type="submit" class="btn btn-outline-primary">Registro</button> <br/>
+        </div> 
+    </div>
+    </form><br/>
+
+   
+    {% endblock %}
